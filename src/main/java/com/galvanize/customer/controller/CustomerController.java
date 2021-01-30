@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 
 
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -48,8 +46,7 @@ public class CustomerController {
     }
     @DeleteMapping("/api/customers/{customerId}")
     public String deleteCustomer(@PathVariable Long customerId){
-         customerService.deleteCustomerById(customerId);
-         return "Customer deleted";
-    }
 
+         return customerService.deleteCustomerById(customerId);
+    }
 }

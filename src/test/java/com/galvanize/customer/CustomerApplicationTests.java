@@ -78,15 +78,9 @@ class CustomerApplicationTests {
 	@Test
 	public void deleteCustomerById() throws Exception {
 		addCustomer();
-
 		mockMvc.perform(delete("/api/customers/123")
 				.contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk());
 
-		//getCustomers();
-
-
 	}
-
-
 }
